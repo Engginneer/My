@@ -11,3 +11,4 @@ if __name__ == '__main__':
 
     print(f'Длина списка: {len(new_list)}')
     print(new_list)
+
