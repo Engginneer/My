@@ -1,14 +1,21 @@
-def longer(x: str) -> str:
-    word_time = x.split(' ')
-    word_max = word_time[0]
-    for sym in word_time:
-        if len(sym) > len(word_max):
-            word_max = sym
+def coding_rar(x: str) -> str:
+    text_after = ''
+    count = 1
+    for i in range(1, len(x)):
 
-    return word_max
+        if x[i - 1] == x[i]:
+            count += 1
+        elif x[i - 1] != x[i]:
+            text_after += x[i - 1]
+            text_after += str(count)
+            count = 1
+        if i == len(x) - 1:
+            text_after += x[i]
+            text_after += str(count)
+    return text_after
+
 
 
 if __name__ == '__main__':
-    text = input("Введите текст: ")
-    long_word = longer(text)
-    print(f'Самое длинное слово: "{long_word}"\nЕго длина: {len(long_word)}')
+    text = input('Введите код без пробелов: ')
+    print(coding_rar(text))
