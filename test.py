@@ -1,21 +1,19 @@
+str_one = input('Введите первую строку: ')
+str_two = input('Введите вторую строку: ')
 
-ip_address = input('Введите ip-адрес: ')
+if len(str_two) != len(str_one):
+    print('Строки с разным количеством символов не могут быть одинаковыми.')
+    quit()
+
+for i in range(len(str_one)):
+    str_time = str_one[1:len(str_one)] + str_one[0]
+    if str_time == str_two:
+        print(f'Первая строка получается из второй со сдвигом {i + 1}')
+        quit()
+    else:
+        str_one = str_time
+print('Первую строку нельзя получить из второй с помощью циклического сдвига.')
 
 
-for part in range(len(ip_address.split('.'))):
-    if len(ip_address.split('.')) != 4:
-        print('IP-адрес - это четыре числа, разделенные точками')
-        quit()
-    elif not 0 <= int(ip_address.split('.')[part]) <= 255:
-        print(f'Число {ip_address.split('.')[part]} выходит за диапазон от 0 до 255')
-        quit()
-    elif True:
-        for sym in range(len(ip_address.split('.')[part].split(''))):
-            if str(ip_address.split('.')[part].split('')).isalpha():
-                print(f'Число {ip_address.split('.')[part]} содержит в себе буквы')
-                quit()
-    elif int(ip_address.split('.')[part]) % 1 != 0:
-        print(f'Число {ip_address.split('.')[part]} не является целым')
-        quit()
-    elif part == 3:
-        print('IP-адрес корректен!')
+
+# absd - bsda - sdab - dabs - absd
