@@ -14,3 +14,5 @@ if __name__ == '__main__':
     low_sym, up_sym = up_low_count(text)
     print(f'Количество заглавных букв: {up_sym}')
     print(f'Количество строчных букв: {low_sym}')
+
+# ывавы
