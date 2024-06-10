@@ -24,7 +24,7 @@ def check_pass():
             if int_quantity > 2:
                 break
 
-    if int_quantity < 3:
+    if int_quantity < 3: # TODO это лучше в else написать к фор циклу
         print('Пароль ненадежный! Придумайте новый!')
         check_pass()
 
@@ -35,4 +35,6 @@ def check_pass():
 
 
 check_pass()
+
+# TODO: Я бы все это в while запихал, и сбрасывал через continue, с другой стороны, работает же
 

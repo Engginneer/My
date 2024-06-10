@@ -1,8 +1,8 @@
 
-def up_low_count(x: str):
+def up_low_count(x: str):  # TODO ъуъуъу
     a = 0
     b = 0
-    for sym in range(len(x)):
+    for sym in range(len(x)):  # TODO тут вообще не нужны индексы, просто "for char in x"
         if x[sym].islower():
             a += 1
         elif x[sym].isupper():

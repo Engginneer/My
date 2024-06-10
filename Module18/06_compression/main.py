@@ -1,7 +1,7 @@
-def coding_rar(x: str) -> str:
+def coding_rar(x: str) -> str:  # TODO ох уж эти иксы
     text_after = ''
     count = 1
-    for i in range(1, len(x)):
+    for i in range(1, len(x)):  # TODO тут лучше использовать enumerate(x)
 
         if x[i - 1] == x[i]:
             count += 1
