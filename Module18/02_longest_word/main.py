@@ -20,10 +20,10 @@
 #     print(f'Самое длинное слово: "{long_word}"\nЕго длина: {len(long_word)}')
 
 # Потом подумал и сделал попроще:
-def longer(x: str) -> str:  # TODO: х не очень нравится
-    word_time = x.split(' ')  # TODO: word_time тоже не отображает суть, лучше что то типа ворд_лист
+def longer(x: str) -> str:
+    word_time = x.split(' ')
     word_max = word_time[0]
-    for sym in word_time:  # TODO: и тут соответственно вышло бы "for word in word_list:"
+    for sym in word_time:
         if len(sym) > len(word_max):
             word_max = sym
 
@@ -33,4 +33,4 @@ def longer(x: str) -> str:  # TODO: х не очень нравится
 if __name__ == '__main__':
     text = input("Введите текст: ")
     long_word = longer(text)
-    print(f'Самое длинное слово: "{long_word}"\nЕго длина: {len(long_word)}')  # TODO: а в целом да, тут лучше чем выше)
+    print(f'Самое длинное слово: "{long_word}"\nЕго длина: {len(long_word)}')
