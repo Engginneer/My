@@ -1,13 +1,11 @@
 from pprint import pprint
-# TODO Рекомендую почитай про pprint, имба
 
 data = {
     "address": "0x544444444444",
     "ETH": {
         "balance": 444,
         "total_in": 444,
-        "total_out": 4  # В задании здесь стоит ("totalOut": 4), по этому при выполнении 4ого пункта будет
-                        # создание нового ключа, а не присвоение в существующий, хз это ли требовалось....
+        "total_out": 4
     },
     "count_txs": 2,
     "tokens": [
@@ -47,5 +45,29 @@ data = {
         }
     ]
 }
+# 1
+print(data.keys())
+print(list(data.values()))
+
+# 2
+data['ETH']['total_diff'] = 100
+# 3
+data['tokens'][0]['fst_token_info']['name'] = 'doge'
+
+# 4
+sum_total = 0
+
+for i, itm in enumerate(data['tokens']):
+    if 'total_out' in itm:
+        sum_total += data['tokens'][i]['total_out']
+        data['tokens'][i].pop('total_out')
+
+data['ETH']['totalOut'] = sum_total
+
+# 5
+data['tokens'][1]['sec_token_info']['total_price'] = data['tokens'][1]['sec_token_info'].pop('price')
+
+#
+pprint(data)
 
 
