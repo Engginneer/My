@@ -3,22 +3,25 @@ from collections import defaultdict
 
 text = input('Введите текст: ').lower()
 count_hist = dict()
-for sym in text:
-    if sym not in count_hist:
-        count_hist[sym] = 1
+for char in text:
+    if char not in count_hist:
+        count_hist[char] = 1
     else:
-        count_hist[sym] += 1
+        count_hist[char] += 1
+
+pprint(count_hist)
 
 set_values = set(count_hist.values())
 inv_count_hist = {}
-time_list = []
+temp_list = []
 
+print(set_values)
 for i in set_values:
-    time_list = []
-    for key, values in count_hist.items():
-        if i == values:
-            time_list.append(key)
-    inv_count_hist[i] = time_list
+    temp_list = []
+    for key in count_hist.keys():
+        if i == count_hist[key]:
+            temp_list.append(key)
+    inv_count_hist[i] = temp_list
 
 print()
 
@@ -26,7 +29,7 @@ for key, value in inv_count_hist.items():
     print(f'{key} : {value}')
 
 
-pprint(inv_count_hist)
+
 
 
 

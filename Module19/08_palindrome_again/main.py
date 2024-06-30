@@ -9,8 +9,8 @@ for char in str_inp:
 
 poly = 2
 
-for key, itm in dict_str.items():
-    if itm % 2 == 1:
+for values in dict_str.values():
+    if values % 2 == 1:
         poly -= 1
         if poly == 0:
             print('Палиндром не получается')

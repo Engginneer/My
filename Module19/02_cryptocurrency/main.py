@@ -47,7 +47,7 @@ data = {
 }
 # 1
 print(data.keys())
-print(list(data.values()))
+print(data.values())
 
 # 2
 data['ETH']['total_diff'] = 100

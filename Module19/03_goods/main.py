@@ -24,10 +24,10 @@ store = {
     ],
 }
 
-for i, code in enumerate(goods.values()):
-    cost = 0
+for key in goods:
+    total_cost = 0
     quantity_items = 0
-    for x, y in enumerate(store[code]):
-        cost += y['price']
-        quantity_items = y['quantity']
-    print(f'{list(goods.keys())[i]} - {quantity_items} штук, цена - {cost * quantity_items}')
+    for item in store[goods[key]]:
+        total_cost += item['price'] * item['quantity']
+        quantity_items = item['quantity']
+    print(f'{key} - {quantity_items} штук, цена - {total_cost}')
