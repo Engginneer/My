@@ -1,7 +1,22 @@
+def is_prime(x: int) -> bool:
+    count = 0
+    for i in range(1, x + 1):
+        if x % i == 0:
+            count += 1
+    if count == 2:
+        return True
+    else:
+        return False
 
-def prime(maximum: int) -> iter:
-    ...
+
+def main(object_input):
+    list_output = []
+    for index, char in enumerate(object_input):
+        if is_prime(index):
+            list_output.append(char)
+    return list_output
 
 
-inpt = input('Введите фразу для обработки: ')
-print([inpt[i] for i in prime(len(inpt) - 1)])
+object_input = 'О Дивный Новый мир!'
+list_output = main(object_input)
+print(list_output)

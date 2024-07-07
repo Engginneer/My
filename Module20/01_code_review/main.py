@@ -1,9 +1,23 @@
+def interests_and_len(x: dict):
+    list_interests = []
+    for values in x.values():
+        for sense in values['interests']:
+            list_interests.append(sense)
+
+    len_name = 0
+    for values in x.values():
+        for sense in values['surname']:
+            len_name += len(sense)
+
+    return list_interests, len_name
+
+
 students = {
     1: {
         'name': 'Bob',
         'surname': 'Vazovski',
         'age': 23,
-        'interests': ['biology, swimming']
+        'interests': ['biology', 'swimming']
     },
     2: {
         'name': 'Rob',
@@ -19,24 +33,13 @@ students = {
     }
 }
 
+# 1 задание:
 
-def f(dict):
-    lst = []
-    string = ''
-    for i in dict:
-        lst += (dict[i]['interests'])
-        string += dict[i]['surname']
-    cnt = 0
-    for s in string:
-        cnt += 1
-    return lst, cnt
+for ID, data in students.items():
+    print(f'ID студента: {ID}, его возраст: {data['age']}')
+
+# 2 задание:
 
 
-pairs = []
-for i in students:
-    pairs += (i, students[i]['age'])
-
-
-my_lst = f(students)[0]
-l = f(students)[1]
-print(my_lst, l)
+interest, len_names = interests_and_len(students)
+print(f'Интересы студентов: {interest},\nОбщая длина всех фамилий: {len_names}')

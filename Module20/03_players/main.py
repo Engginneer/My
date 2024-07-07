@@ -5,4 +5,9 @@ players = {
 }
 
 
+new = []
+for name, numbers in players.items():
+    new.append(name + numbers)
+
+print(new)
 
