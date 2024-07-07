@@ -1,4 +1,4 @@
-def interests_and_len(x: dict):
+def interests_and_len(x: dict):  # TODO переделать функцию в один цикл и без .values, да и почему тут переменная sense, умеешь поставить в тупик своими переменными)
     list_interests = []
     for values in x.values():
         for sense in values['interests']:
@@ -35,7 +35,7 @@ students = {
 
 # 1 задание:
 
-for ID, data in students.items():
+for ID, data in students.items(): # TODO переделываем без .items
     print(f'ID студента: {ID}, его возраст: {data['age']}')
 
 # 2 задание:

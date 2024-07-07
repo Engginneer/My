@@ -23,3 +23,23 @@ print(fake_zip(str_example, tuple_example))
 # new_tuple = zip(str_example, tuple_example)
 #
 # print(new_tuple)
+
+
+# TODO все ништяк но верни форму которую я тебе передал
+
+# def zipper(first: iter, second: iter) -> tuple:
+#     ...
+#
+#
+# first_data = 'asd'
+# secondary_data = (10, 20, 30, 40)
+#
+# res = zip(first_data, secondary_data)
+# for itm in res:
+#     print(tuple(itm))
+#
+# print('\n\n')
+#
+# res1 = zipper(first_data, secondary_data)
+# for itm in res1:
+#     print(tuple(itm))

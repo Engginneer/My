@@ -4,7 +4,7 @@ players = {
     ("Rob", "Bobbin"): (12, 8, 2)
 }
 
-
+# TODO это не самое эффективное решение, раз уж прошел зип - будь добр, сюда его
 new = []
 for name, numbers in players.items():
     new.append(name + numbers)
