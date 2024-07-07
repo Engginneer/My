@@ -1,15 +1,13 @@
-def interests_and_len(x: dict):  # TODO переделать функцию в один цикл и без .values, да и почему тут переменная sense, умеешь поставить в тупик своими переменными)
-    list_interests = []
-    for values in x.values():
-        for sense in values['interests']:
-            list_interests.append(sense)
+def interests_and_len(x: dict):
+    list_interests = set()
+    for i in students:
+        list_interests.update(set(students[i]['interests']))
 
     len_name = 0
-    for values in x.values():
-        for sense in values['surname']:
-            len_name += len(sense)
+    for element in students:
+        len_name += len(students[element]['surname'])
 
-    return list_interests, len_name
+    return list(list_interests), len_name
 
 
 students = {
@@ -35,8 +33,8 @@ students = {
 
 # 1 задание:
 
-for ID, data in students.items(): # TODO переделываем без .items
-    print(f'ID студента: {ID}, его возраст: {data['age']}')
+for student in students:
+    print(f'ID студента: {student}, его возраст: {students[student]['age']}')
 
 # 2 задание:
 
