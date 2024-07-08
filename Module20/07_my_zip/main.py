@@ -1,6 +1,6 @@
-def fake_zip(x, y):
-    list_one = tuple(x)
-    list_two = tuple(y)
+def fake_zip(first: iter, second: iter) -> tuple:
+    list_one = tuple(first)
+    list_two = tuple(second)
 
     new_list = []
     for i in range(min(len(list_one), len(list_two))):
@@ -11,10 +11,14 @@ def fake_zip(x, y):
 str_example = {'abcd': 23, 'sdfdsf': 23.5}
 tuple_example = (10, 20, 30, 40)
 
-print(fake_zip(str_example, tuple_example))
+result_end = fake_zip(str_example, tuple_example)
 
+for itm in result_end:
+    print(itm)
 
-
+result_easy = zip(str_example, tuple_example)
+for itm in result_easy:
+    print(tuple(itm))
 
 #
 # str_example = 'abcd'
@@ -25,7 +29,7 @@ print(fake_zip(str_example, tuple_example))
 # print(new_tuple)
 
 
-# TODO все ништяк но верни форму которую я тебе передал
+# все ништяк но верни форму которую я тебе передал:
 
 # def zipper(first: iter, second: iter) -> tuple:
 #     ...
