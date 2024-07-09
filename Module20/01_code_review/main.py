@@ -1,11 +1,9 @@
 def interests_and_len(x: dict):
     list_interests = set()
+    len_name = 0
     for i in students:
         list_interests.update(set(students[i]['interests']))
-
-    len_name = 0
-    for element in students:
-        len_name += len(students[element]['surname'])
+        len_name += len(students[i]['surname'])
 
     return list(list_interests), len_name
 
