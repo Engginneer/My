@@ -29,7 +29,7 @@ def finder(key: str, sites: dict, depth=None):
 
 if __name__ == '__main__':
 
-    sites = {
+    site = {
         'html': {
             'head': {
                 'title': 'Мой сайт'
@@ -45,7 +45,7 @@ if __name__ == '__main__':
     key_inp = input('Введите искомый ключ: ')
     depth_Y_N = input('Хотите ввести максимальную глубину? Y/N:').lower()
     if depth_Y_N == 'n':
-        print(f'Значение ключа: {finder(key_inp, sites)}')
+        print(f'Значение ключа: {finder(key_inp, site)}')
     elif depth_Y_N == 'y':
         depth_inp = int(input('Введите глубину поиска: '))
-        print(f'Значение ключа: {finder(key_inp, sites, depth_inp)}')
+        print(f'Значение ключа: {finder(key_inp, site, depth_inp)}')
