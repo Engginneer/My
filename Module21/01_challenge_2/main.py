@@ -1,9 +1,8 @@
 def printer(num: int) -> str:
     if num == 1:
-        str_temp = str(src - num + 1) + '\n'
-        return str_temp
+        return str(num) + '\n'
     else:
-        return str(src - num + 1) + '\n' + printer(num - 1)
+        return printer(num - 1) + str(num) + '\n'
 
 
 src = int(input('Введите число: '))

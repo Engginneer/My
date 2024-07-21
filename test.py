@@ -1,19 +1,9 @@
-str_one = input('Введите первую строку: ')
-str_two = input('Введите вторую строку: ')
-
-if len(str_two) != len(str_one):
-    print('Строки с разным количеством символов не могут быть одинаковыми.')
-    quit()
-
-for i in range(len(str_one)):
-    str_time = str_one[1:len(str_one)] + str_one[0]
-    if str_time == str_two:
-        print(f'Первая строка получается из второй со сдвигом {i + 1}')
-        quit()
+def printer(num: int) -> str:
+    if num == 1:
+        return str(num) + '\n'
     else:
-        str_one = str_time
-print('Первую строку нельзя получить из второй с помощью циклического сдвига.')
+        return printer(num - 1) + str(num) + '\n'
 
 
-
-# absd - bsda - sdab - dabs - absd
+src = int(input('Введите число: '))
+print(printer(src))
