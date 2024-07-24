@@ -1,34 +1,30 @@
-from pprint import pprint
+def one_to_three(list_input: list):
+    left_list = []
+    midl_list = []
+    right_list = []
+    basic_elem = list_input[len(list_input) - 1]
+    for i in list_input:
+        if i < basic_elem:
+            left_list.append(i)
+        elif i == basic_elem:
+            midl_list.append(i)
+        elif i > basic_elem:
+            right_list.append(i)
+    return left_list, midl_list, right_list
 
 
-def market(quantity_inp: int, site_inp, name_inp):
-    for i, j in site_inp.items():
-        if isinstance(j, str):
-            str_in = j.split(' ')
-            for index, word in enumerate(str_in):
-                if word.lower() == 'телефон':
-                    str_in.insert(index, name_inp)
-                    str_in.remove('телефон')
-            site_inp[i] = ' '.join(str_in)
-        else:
-            market(quantity_inp, j, name_inp)
-    return site_inp
+def fast_sort(list_inp: list):
+    result_list = []
+    left_list, midl_list, right_list = one_to_three(list_inp)
+    if left_list:
+        result_list += fast_sort(left_list)
+    if midl_list:
+        for index in midl_list:
+            result_list.append(index)
+    if right_list:
+        result_list += fast_sort(right_list)
+    return result_list
 
 
-site = {
-    'html': {
-        'head': {
-            'title': 'Куплю/продам телефон недорого'
-        },
-        'body': {
-            'h2': 'У нас самая низкая цена на телефон',
-            'div': 'Купить',
-            'p': 'Продать'
-        }
-    }
-}
-
-quantity = int(input('Введите количество сайтов: '))
-name = input('Введите название продукта для нового сайта: ')
-
-pprint(market(quantity, site, name))
+example_list = [5, 8, 9, 4, 2, 9, 1, 8]
+print(fast_sort(example_list))
