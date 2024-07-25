@@ -1,29 +1,30 @@
 def finder(key: str, sites: dict, depth=None):
-    if not depth:
-        if key in sites:
-            return sites[key]
+    if depth == 0:
+        return None
+    if key in sites:
+        return sites[key]
+    else:
+        if depth:
+            depth -= 1
+            if depth == 0:
+                return None
+            else:
+                for low_data in sites:
+                    if isinstance(sites[low_data], dict):
+                        result = finder(key, sites[low_data])
+                        if result:
+                            break
+                else:
+                    result = None
+            return result
         else:
-            for low_data in sites.values():
-                if isinstance(low_data, dict):
-                    result = finder(key, low_data)
+            for low_data in sites:
+                if isinstance(sites[low_data], dict):
+                    result = finder(key, sites[low_data])
                     if result:
                         break
             else:
                 result = None
-        return result
-
-    elif depth == 1:
-        if key in sites:
-            return sites[key]
-
-    else:
-        for low_data in sites.values():
-            if isinstance(low_data, dict):
-                result = finder(key, low_data, depth - 1)
-                if result:
-                    break
-        else:
-            result = None
         return result
 
 
@@ -57,3 +58,5 @@ if __name__ == '__main__':
 #  чекает, есть ли тут ключ сразу, если нет, чекает указанна ли глубина, и больше ли нуля она, потом начинает
 #  обращаться ко всем элементам подряд по ключу, проверять, словарь ли и если словарь, закидывает в рекурсию, у тебя
 #  как бы все правильно, все будет работать, базар вокзал, но можно сделать код более читаемым, и чуть менее ветвящимся
+
+# Я постарался подправить по рекомендованному алгоритму, убрал все валюес
