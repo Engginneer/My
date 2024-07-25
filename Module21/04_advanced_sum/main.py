@@ -9,5 +9,7 @@ def custom_sum(obj: list):
     return sum_out
 
 
-num_lst = [[1, 2, [3]], [1, 5, (15, 0), 'hi'], 3]
+num_lst = [[1, 2, [3]], [1, 5, (15, 0), 'hi'], 3, '18']
 print(custom_sum(num_lst))
+
+# TODO я тут маленько исходный словарь поправил, и оно чета не работает)
