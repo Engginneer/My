@@ -29,5 +29,3 @@ def fast_sort(list_inp: list):
 example_list = [5, 8, 9, 4, 2, 9, 1, 8]
 print(fast_sort(example_list))
 
-
-# TODO ништяк, все разумно, все уместно
