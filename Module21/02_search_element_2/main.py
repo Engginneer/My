@@ -1,59 +1,47 @@
-def finder(key: str, sites: dict, depth=None):
-    if depth == 0:
-        return None
-    if key in sites:
-        return sites[key]
-    else:
-        if depth:  # эта проверка поидее не имеет смысла, ты на второй строчке ещё проверил все
-            depth -= 1
-            if depth == 0:  # вот здесь не пойму, а это как будто лишнее, он понизил уровень, и не проверяя что там,
-                # выкинул, оно точно работает?, если работает - базар вокзал
-
-                return None
-            else:
-                for low_data in sites:
-                    if isinstance(sites[low_data], dict):
-                        result = finder(key, sites[low_data])
-                        if result:
-                            break
-                else:
-                    result = None
+def find_in_str(key_inp: str, site_inp: dict, depth_inp=None):
+    result = None
+    if key_inp in site_inp:
+        return site_inp[key_inp]
+    elif depth_inp or depth_inp == 0:
+        if depth_inp == 0:
             return result
         else:
-            for low_data in sites:  # крч да, это должно влиться в основную функцию, и 9ая строка соответственно тоже
-                # отъезжает
-
-                if isinstance(sites[low_data], dict):
-                    result = finder(key, sites[low_data])
+            depth_inp -= 1
+            for key in site_inp:
+                if isinstance(site_inp[key], dict):
+                    result = find_in_str(key_inp, site_inp[key], depth_inp)
                     if result:
-                        break
-            else:
-                result = None
+                        return result
+                return result
+    else:
+        for key in site_inp:
+            if isinstance(site_inp[key], dict):
+                result = find_in_str(key_inp, site_inp[key], depth_inp)
+                if result:
+                    return result
         return result
 
 
-if __name__ == '__main__':
-
-    site = {
-        'html': {
-            'head': {
-                'title': 'Мой сайт'
-            },
-            'body': {
-                'h2': 'Здесь будет мой заголовок',
-                'div': 'Тут, наверное, какой-то блок',
-                'p': 'А вот здесь новый абзац'
-            }
+site = {
+    'html': {
+        'head': {
+            'title': 'Куплю/продам телефон недорого'
+        },
+        'body': {
+            'h2': 'У нас самая низкая цена на телефон',
+            'div': 'Купить',
+            'p': 'Продать'
         }
     }
+}
 
-    key_inp = input('Введите искомый ключ: ')
-    depth_Y_N = input('Хотите ввести максимальную глубину? Y/N:').lower()
-    if depth_Y_N == 'n':
-        print(f'Значение ключа: {finder(key_inp, site)}')
-    elif depth_Y_N == 'y':
-        depth_inp = int(input('Введите глубину поиска: '))
-        print(f'Значение ключа: {finder(key_inp, site, depth_inp)}')
+key = input('Введите ключ: ')
+depth_Y_N = input('Хотите указать глубину поиска? y - да, n - нет ').lower()
+if depth_Y_N == 'y':
+    depth = int(input('Введите глубину: '))
+    print(find_in_str(key, site, depth))
+else:
+    print(find_in_str(key, site))
 
 
 # TODO погляди мое решение, разберись как оно работает, и потом на память/логику перепиши пж, удивительно как четко ты

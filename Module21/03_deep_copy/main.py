@@ -8,10 +8,7 @@ def market(site_inp, name_inp):
             str_in = site_inp[key].split(' ')
             for index, word in enumerate(str_in):
                 if word.lower() == 'телефон':
-
-                    str_in.insert(index, name_inp)  # todo Смотри, раз уж ты получил индекс элемента, то зачем тебе
-                                                    # инсерт ремув, пиши просто  str_in[index] = 'Jopushka'
-                    str_in.remove('телефон')
+                    str_in[index] = name_inp
 
             site_inp[key] = ' '.join(str_in)
         else:
