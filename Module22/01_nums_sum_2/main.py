@@ -8,3 +8,5 @@ for i in str_file:
 
 file_answer = open('answer.txt', 'w')
 file_answer.write(str(summ))
+file.close()
+file_answer.close()
