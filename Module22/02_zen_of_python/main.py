@@ -2,7 +2,7 @@ file = open('zen.txt', 'r')
 temp_str = file.read()
 temp_list = temp_str.split('\n')
 file.close()
-file = open('zen.txt', 'a')
+file = open('zen_copy.txt', 'a')
 
 temp_list = temp_list[::-1]
 ans_str = '\n\n\n'
