@@ -30,3 +30,6 @@ list_to_second_file = sorted_true(final_list)
 file_2.write(str(len(list_to_second_file)) + '\n')
 for num in range(len(list_to_second_file)):
     file_2.write(f'{num + 1}) {list_to_second_file[num]}\n')
+
+file_1.close()
+file_2.close()
