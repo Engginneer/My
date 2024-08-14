@@ -1,22 +1,42 @@
-
+import zipfile
 from collections import defaultdict
 from pprint import pprint
 
-freq_dict = defaultdict(int)
-eng_alphabet = 'abcdefghijklmnopqrstuvwxyz'
-char_cntr = 0
-with open('text.txt', encoding='utf8', mode='r') as txt:
-    for line in txt:
+
+def extract_file(filename):
+    z_file = zipfile.ZipFile(filename)
+    name_list = z_file.namelist()
+    if name_list:
+        for nme in name_list:
+            z_file.extract(nme)
+        print(f'Извлечены следующие файлы:\n{name_list}')
+        return name_list
+    else:
+        print(f'Архив пуст')
+        return None
+
+
+def counter(txt_file):
+    for line in txt_file:
         for char in line:
-            if char.lower() in eng_alphabet:
-                freq_dict[char.lower()] += 1
-                char_cntr += 1
+            if char.isalpha():
+                freq_dict[char] += 1
 
-freq_list = list(zip(freq_dict, freq_dict.values()))
-freq_list.sort(key=lambda obj: - obj[1])
-print(freq_list)
-print(char_cntr)
 
-with open('analysis.txt', mode='w', encoding='utf8') as txt:
-    for itm in freq_list:
-        txt.write(f'{itm[0]}\t{round(itm[1]/char_cntr, 3)}\n')
+if __name__ == '__main__':
+    files_list = extract_file('voyna-i-mir.zip')
+
+    freq_dict = defaultdict(int)
+
+    for name in files_list:
+        with open(name, encoding='utf8', mode='r') as txt:
+            counter(txt)
+
+    freq_list = list(zip(freq_dict, freq_dict.values()))
+    freq_list.sort(key=lambda obj: - obj[1])
+
+    pprint(freq_list)
+    summ_symbol = 0
+    for i in freq_list:
+        summ_symbol += i[1]
+    print(summ_symbol)
