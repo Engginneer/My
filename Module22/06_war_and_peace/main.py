@@ -9,9 +9,10 @@ book = open('voyna-i-mir.txt', 'r', encoding='UTF=8')
 
 text_for_book = book.read()
 analysis_symbol = defaultdict(int)
-for i_elem in text_for_book:
-    if i_elem.isalpha():
-        analysis_symbol[i_elem.lower()] += 1
+for sym in text_for_book:
+    if sym.isalpha():
+        analysis_symbol[sym.lower()] += 1
+book.close()
 result = sorted(analysis_symbol.items(), key=lambda item: item[1], reverse=True)
 pprint(result)
 

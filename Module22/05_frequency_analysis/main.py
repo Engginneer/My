@@ -2,6 +2,7 @@ from collections import defaultdict
 
 file = open('text.txt', 'r')
 str_file = file.read()
+file.close()
 frequency_dict = defaultdict(int)
 for sym in str_file:
     if sym.isalpha():
@@ -18,3 +19,4 @@ file_2 = open('analysis.txt', 'w')
 for i in sorted_analysis:
     print(i)
     file_2.write(str(i[0]) + ' ' + str(i[1]) + '\n')
+file_2.close()
