@@ -16,6 +16,6 @@ str_to_log = '\n'.join(errors_list)
 with open('errors.log', 'w', encoding='utf8') as errors_log:
     if str_to_log:
         errors_log.write(str_to_log)
-        print(f'список ошибок: {errors_log}') # TODO тут работает как то некорректно вывод
+        print(f'список ошибок: \n{str_to_log}') # TODO тут работает как то некорректно вывод
 
 print(f'Общее количество символов: {summ_total}')
