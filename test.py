@@ -1,42 +1,20 @@
-import zipfile
-from collections import defaultdict
-from pprint import pprint
+summ_total = 0
+errors_list = []
+with open('people.txt', 'r', encoding='utf8') as people:
+    for i_line in people:
+        try:
+            if len(i_line) < 4:
+                raise ValueError('Ошибка длины')
+            else:
+                summ_total += len(i_line) - 1
+        except ValueError:
+            errors_list.append(f'Возникла ошибка в строке {i_line}')
 
+str_to_log = '\n'.join(errors_list)
 
-def extract_file(filename):
-    z_file = zipfile.ZipFile(filename)
-    name_list = z_file.namelist()
-    if name_list:
-        for nme in name_list:
-            z_file.extract(nme)
-        print(f'Извлечены следующие файлы:\n{name_list}')
-        return name_list
-    else:
-        print(f'Архив пуст')
-        return None
+with open('errors.log', 'w', encoding='utf8') as errors_log:
+    if str_to_log:
+        errors_log.write(str_to_log)
+        print(f'список ошибок: {errors_log}')
 
-
-def counter(txt_file):
-    for line in txt_file:
-        for char in line:
-            if char.isalpha():
-                freq_dict[char] += 1
-
-
-if __name__ == '__main__':
-    files_list = extract_file('voyna-i-mir.zip')
-
-    freq_dict = defaultdict(int)
-
-    for name in files_list:
-        with open(name, encoding='utf8', mode='r') as txt:
-            counter(txt)
-
-    freq_list = list(zip(freq_dict, freq_dict.values()))
-    freq_list.sort(key=lambda obj: - obj[1])
-
-    pprint(freq_list)
-    summ_symbol = 0
-    for i in freq_list:
-        summ_symbol += i[1]
-    print(summ_symbol)
+print(f'Общее количество символов: {summ_total}')

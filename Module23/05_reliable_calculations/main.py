@@ -1,6 +1,19 @@
 # TODO здесь писать код
+from math import sqrt
 
-# Здесь создайте функцию get_sage_sqrt
+
+def get_sage_sqrt(num):
+    answer = []
+    try:
+        if num <= 0:
+            raise ValueError('Число меньше либо равно нулю')
+        else:
+            answer.append(sqrt(num))
+    except ValueError as exp1:
+        answer.append(exp1)
+    except Exception as exp2:
+        answer.append(exp2)
+    return answer
 
 
 # Тестовые случаи
