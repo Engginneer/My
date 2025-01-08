@@ -1,16 +1,9 @@
-import pandas
+from pprint import pprint
+from math import pi, cos
 
-base_cos = pandas.read_excel('base_cos.xlsx')
-angle = 0.587
-min_diff = 1
-result_X = 0
-result_Y = 0
-for x in range(0, 91, 5):
-    for y in range(1, 19):
-        if abs(angle - base_cos[x][y]) < min_diff:
-            min_diff = abs(angle - base_cos[x][y])
-            result_X = x
-            result_Y = y * 5
+base_table_cosa = [[round(cos(y * pi / 180) * cos(x * pi / 180), 3) for y in range(0, 91)] for x in range(0, 91)]
 
-print(result_X, result_Y)
 
+
+for i in list_for_boss:
+    print(i)
