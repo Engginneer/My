@@ -50,7 +50,7 @@ def find_cosa(curr_or_pow, volt_or_none=None) -> float:  # Функция нах
         cosa = power_moment / power_fact
     if cosa > 1:
         cosa = 1
-    return cosa
+    return round(cosa, 3)
 
 
 def find_degree(value_cosa):  # Функция находит максимально схожее теоретическое значение с получившимся
@@ -60,16 +60,16 @@ def find_degree(value_cosa):  # Функция находит максималь
         result_y = 'батарея солнечная в тени'
         return result_x, result_y
     else:
-        base_cos = read_excel('base_cos.xlsx')
+        base_cos = generation_table()
         min_diff = 1
         result_x = 0
         result_y = 0
-        for x in range(0, 91, 5):
-            for y in range(1, 19):
+        for x in range(0, 91):
+            for y in range(0, 91):
                 if abs(value_cosa - base_cos[x][y]) < min_diff:
                     min_diff = abs(value_cosa - base_cos[x][y])
                     result_y = x
-                    result_x = y * 5
+                    result_x = y
         return result_x, result_y
 
 
