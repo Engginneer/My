@@ -1,11 +1,16 @@
 from random import randint, uniform
 from pandas import read_excel
-from math import pi, cos
+from math import pi, cos, radians
 
 
 def generation_table():
-    base_table_cosa = [[round(cos(y * pi / 180) * cos(x * pi / 180), 3) for y in range(0, 91)] for x in range(0, 91)]
-    return base_table_cosa
+    base = list()
+    for x in range(0, 91, 5):
+        for y in range(0, 91, 5):
+            base.append([x, y, round((cos(radians(y)) * cos(radians(x))), 6)])
+    base = sorted(base, key=lambda lst: lst[2])
+    # print(base)
+    return base
 
 
 def synthetic_data(power: int, voltage: float):
@@ -60,17 +65,14 @@ def find_degree(value_cosa):  # Функция находит максималь
         result_y = 'батарея солнечная в тени'
         return result_x, result_y
     else:
-        base_cos = generation_table()
-        min_diff = 1
-        result_x = 0
-        result_y = 0
-        for x in range(0, 91):
-            for y in range(0, 91):
-                if abs(value_cosa - base_cos[x][y]) < min_diff:
-                    min_diff = abs(value_cosa - base_cos[x][y])
-                    result_y = x
-                    result_x = y
-        return result_x, result_y
+        base = generation_table()
+        while True:
+            if len(base) == 1:
+                break
+            half_base = len(base) // 2
+            ref = base[half_base]
+            base = base[0: half_base] if ref[2] > value_cosa else base[half_base:]
+    return base[0][0], base[0][1]
 
 
 if __name__ == '__main__':

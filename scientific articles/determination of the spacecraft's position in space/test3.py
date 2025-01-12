@@ -18,7 +18,7 @@ def find_degree(value_cosa):  # Функция находит максималь
         return result_x, result_y
     else:
         base_cos = generation_table()
-        min_diff = 0000.1
+        min_diff = 0.01
         result_x = []
         result_y = []
         for x in range(0, 19):
@@ -27,10 +27,10 @@ def find_degree(value_cosa):  # Функция находит максималь
                     min_diff = abs(value_cosa - float(base_cos[x][y]))
                     result_y.append(x * 5)
                     result_x.append(y * 5)
-        return result_x, result_y
+        return result_x[-1], result_y[-1]
 
 
-print(find_degree(0.367))
-print(find_degree(0.366))
+print(find_degree(0.136))
+print(find_degree(0.520))
 
 # Если брать по 5 градусов кратность, то он находит нормаьно (последние два числа в каждом списке нужные), когда беру по одному, он начинает мозги ебать сильно
