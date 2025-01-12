@@ -50,7 +50,7 @@ class Kid:
         self.state_of_hungry = state_of_hungry
 
     def info_kid(self):
-        print(f'Меня зовут {self.name}, мне {self.age} лет!')
+        print(f'Меня зовут {self.name}, мне {self.age} год(а)!')
         if self.state_of_calm == 1:
             print(f'Я плачу, меня нужно успокоить!')
         else:
@@ -65,8 +65,18 @@ Semen = Kid('Семен', 2, randint(0, 1), randint(0, 1))
 Alisa = Kid('Алиса', 1, randint(0, 1), randint(0, 1))
 Sveta = Kid('Света', 3, randint(0, 1), randint(0, 1))
 
-Parent_Vasya = Parent('Вася', 33, [Semen, Sveta, Alisa])
+print(Semen.age)
 
+while True:
+    try:
+        age_parent = int(input('Введите возраст родителя: '))
+        Parent_Vasya = Parent('Вася', age_parent, [Semen, Sveta, Alisa])
+        for kid in Parent_Vasya.list_child:
+            if Parent_Vasya.age - kid.age <= 16:
+                raise ValueError('Ошибка возраста')
+        break
+    except:
+        print('Разница в возрасте родителя и ребенка должна быть минимум 16 лет')
 Parent_Vasya.info()
 Semen.info_kid()
 Alisa.info_kid()

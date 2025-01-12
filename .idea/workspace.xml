@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9eb82f5c-3113-44b0-b62d-e47785969743" name="Changes" comment="working on tasks skillbox (24.2)">
+    <list default="true" id="9eb82f5c-3113-44b0-b62d-e47785969743" name="Changes" comment="working on tasks skillbox (24.3)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fast_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/fast_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules skillbox/Module24/03_fathers_mothers_kids/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules skillbox/Module24/03_fathers_mothers_kids/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/premain.py" beforeDir="false" afterPath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/premain.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/test3.py" beforeDir="false" afterPath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/test3.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +58,7 @@
     "Python.main (3).executor": "Run",
     "Python.main (4).executor": "Run",
     "Python.main (5).executor": "Run",
-    "Python.main.executor": "Run",
+    "Python.main.executor": "Debug",
     "Python.premain (1).executor": "Run",
     "Python.premain.executor": "Run",
     "Python.test (1).executor": "Run",
@@ -117,6 +116,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="fast_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="My" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fast_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="My" />
       <option name="ENV_FILES" value="" />
@@ -161,35 +182,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="My" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads/Telegram Desktop" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/Telegram Desktop/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.fast_test" />
         <item itemvalue="Python.3" />
         <item itemvalue="Python.1" />
         <item itemvalue="Python.premain" />
-        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -401,7 +400,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736588199151</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="working on tasks skillbox (24.3)">
+      <option name="closed" value="true" />
+      <created>1736689164867</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1736689164867</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -439,7 +446,8 @@
     <MESSAGE value="working on an article" />
     <MESSAGE value="working on tasks skillbox (24.1)" />
     <MESSAGE value="working on tasks skillbox (24.2)" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on tasks skillbox (24.2)" />
+    <MESSAGE value="working on tasks skillbox (24.3)" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on tasks skillbox (24.3)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -448,6 +456,11 @@
           <url>file://$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/main.py</url>
           <line>65</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/modules skillbox/Module24/03_fathers_mothers_kids/main.py</url>
+          <line>71</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
