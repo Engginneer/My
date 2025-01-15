@@ -5,6 +5,9 @@ class Cell:
         self.position = position
         self.status = status
 
+    def __str__(self):
+        return str(self.status)
+
     #  Клетка, у которой есть значения
     #   - занята она или нет
     #   - номер клетки
@@ -13,7 +16,7 @@ class Cell:
 
 class Board:
     def __init__(self):
-        self.cells_list = [[Cell(str(i + 1) + str(j + 1)) for i in range(3)] for j in range(3)]
+        self.cells_list = [[Cell(str(j + 1) + str(i + 1)) for i in range(3)] for j in range(3)]
 
     def info(self):
         print('Position:')
@@ -24,7 +27,7 @@ class Board:
         print('Status:')
         for i in self.cells_list:
             for j in i:
-                print(j.status, end=' ')
+                print(str(j), end=' ')
             print()
 
     #  Класс поля, который создаёт у себя экземпляры клетки
@@ -42,17 +45,34 @@ class Player:
 
 
 class Game:
-    def __init__(self, board, players_list):
+    def __init__(self, board, players_list, status=True):
+        self.status = status
         self.players_list = players_list
         self.board = board
 
-    # def chek_win(self):
-    #     if
+    def chek_win(self, status):
+        way = self.board.cells_list
+        if way[0][0].status == way[0][1].status == way[0][2].status != 0 or \
+                way[1][0].status == way[1][1].status == way[1][2].status != 0 or \
+                way[2][0].status == way[2][1].status == way[2][2].status != 0 or \
+                way[0][0].status == way[1][0].status == way[2][0].status != 0 or \
+                way[0][1].status == way[1][1].status == way[2][0].status != 0 or \
+                way[0][2].status == way[1][2].status == way[2][2].status != 0 or \
+                way[0][0].status == way[1][1].status == way[2][2].status != 0 or \
+                way[0][2].status == way[1][1].status == way[2][0].status != 0:
+            status = False
+        return status
 
     def go_to_motion(self, name_player):
-        num_cell = input('Введите номер клетки в формате XX(строка)(столбец): ')
-        if int(self.board.status.cells.list[num_cell[0]][num_cell[1]]) == 0:
-            self.board.status.cells.list[num_cell[0]][num_cell[1]] = name_player
+        while True:
+            print(f'Ходит игрок с именем: {name_player}')
+            board_for_game.info()
+            num_cell = input(f'Игрок {name_player}, введите номер клетки в формате XX(строка)(столбец): ')
+            if self.board.cells_list[int(num_cell[0]) - 1][int(num_cell[1]) - 1].status == 0:
+                self.board.cells_list[int(num_cell[0]) - 1][int(num_cell[1]) - 1].status = name_player
+                break
+            else:
+                print(f'ячейка с индексом {num_cell} занята!')
 
     # Класс «Игры» содержит атрибуты:
     # состояние игры,
@@ -70,9 +90,13 @@ player_2 = Player('player_2')
 board_for_game = Board()
 game = Game(board_for_game, [player_1, player_2])
 
-while True:
-    board_for_game.info()
-    for players in game.players_list:
-        game.go_to_motion(player_1)
+while game.status:
+    for player in game.players_list:
+        game.go_to_motion(player.name)
+        game_flag = game.chek_win(game.status)
+        if not game_flag:
+            print(f'Победил игрок с именем: {player.name}, игра окончена!')
+            game.status = False
+            break
 
 # Нужно запустить и пофиксить ошибки, после этого продолжить написание кода

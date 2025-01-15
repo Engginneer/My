@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9eb82f5c-3113-44b0-b62d-e47785969743" name="Changes" comment="working on tasks skillbox (24.5)">
+    <list default="true" id="9eb82f5c-3113-44b0-b62d-e47785969743" name="Changes" comment="working on tasks skillbox (24.6)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fast_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/fast_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules skillbox/Module24/06_tic-tac-toe/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules skillbox/Module24/06_tic-tac-toe/main.py" afterDir="false" />
@@ -440,7 +440,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736853504108</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="working on tasks skillbox (24.6)">
+      <option name="closed" value="true" />
+      <created>1736859573939</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1736859573939</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -481,7 +489,8 @@
     <MESSAGE value="working on tasks skillbox (24.3)" />
     <MESSAGE value="working on tasks skillbox (24.4)" />
     <MESSAGE value="working on tasks skillbox (24.5)" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on tasks skillbox (24.5)" />
+    <MESSAGE value="working on tasks skillbox (24.6)" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on tasks skillbox (24.6)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -490,6 +499,11 @@
           <url>file://$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/main.py</url>
           <line>65</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/modules skillbox/Module24/06_tic-tac-toe/main.py</url>
+          <line>54</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
