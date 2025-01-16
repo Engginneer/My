@@ -1,15 +1,5 @@
-x = 'X'
-y = 'O'
+data = [[1, 2, 3], [4, 5, 6]]
 
-
-print('Position:')
-for i in range(3):
-    print('-------------------')
-    print('|', end=' ')
-    for j in range(3):
-        print('dsf |', end=' ')
-
-    print()
-print('-------------------')
-
-
+for i in data:
+    for j in i:
+        print(j)
