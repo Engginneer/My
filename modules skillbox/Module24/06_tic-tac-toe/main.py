@@ -26,9 +26,18 @@ class Board:
             print()
         print('Status:')
         for i in self.cells_list:
+            print('----------------')
+            print('|', end=' ')
             for j in i:
-                print(str(j), end=' ')
+                if j.status == game.players_list[0].name:
+                    print(' X |', end=' ')
+                elif j.status == game.players_list[1].name:
+                    print(' O |', end=' ')
+                else:
+                    print('   |', end=' ')
             print()
+        print('----------------')
+        print()
 
     #  Класс поля, который создаёт у себя экземпляры клетки
     pass
@@ -66,10 +75,9 @@ class Game:
     def go_to_motion(self, name_player):
         while True:
             print(f'Ходит игрок с именем: {name_player}')
-            board_for_game.info()
             num_cell = input(f'Игрок {name_player}, введите номер клетки в формате XX(строка)(столбец): ')
             if self.board.cells_list[int(num_cell[0]) - 1][int(num_cell[1]) - 1].status == 0:
-                self.board.cells_list[int(num_cell[0]) - 1][int(num_cell[1]) - 1].status = name_player
+                self.board.cells_list[int(num_cell[0]) - 1][int(num_cell[1]) - 1].status = str(name_player)
                 break
             else:
                 print(f'ячейка с индексом {num_cell} занята!')
@@ -92,9 +100,11 @@ game = Game(board_for_game, [player_1, player_2])
 
 while game.status:
     for player in game.players_list:
+        board_for_game.info()
         game.go_to_motion(player.name)
         game_flag = game.chek_win(game.status)
         if not game_flag:
+            board_for_game.info()
             print(f'Победил игрок с именем: {player.name}, игра окончена!')
             game.status = False
             break
