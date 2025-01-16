@@ -9,6 +9,8 @@ class Cell:
         return str(self.status)
 
 
+
+
 class Board:
     def __init__(self):
         self.cells_list = [[Cell(str(j + 1) + str(i + 1)) for i in range(3)] for j in range(3)]
@@ -35,14 +37,17 @@ class Board:
         print()
 
 
+
 class Player:
     def __init__(self, name):
         self.name = name
 
 
+
 class Game:
     def __init__(self, board, players_list, status=True):
         self.status = status
+        self.count_of_moves = 0
         self.players_list = players_list
         self.board = board
 
@@ -70,18 +75,27 @@ class Game:
                 print(f'ячейка с индексом {num_cell} занята!')
 
 
+
 player_1 = Player('player_1')
 player_2 = Player('player_2')
 board_for_game = Board()
 game = Game(board_for_game, [player_1, player_2])
 
+
 while game.status:
     for player in game.players_list:
+        game.count_of_moves += 1
         board_for_game.info()
         game.go_to_motion(player.name)
-        game_flag = game.chek_win(game.status)
-        if not game_flag:
+        #game_flag = game.chek_win(game.status)
+        if not game.chek_win(game.status):
             board_for_game.info()
             print(f'Победил игрок с именем: {player.name}, игра окончена!')
             game.status = False
             break
+        elif game.count_of_moves == 9:
+            board_for_game.info()
+            print('Игра окончена ничей!')
+            game.status = False
+            break
+
