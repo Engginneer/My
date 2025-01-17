@@ -1,5 +1,2 @@
-data = [[1, 2, 3], [4, 5, 6]]
-
-for i in data:
-    for j in i:
-        print(j)
+x = [[0 for i in range(3)] for j in range(3)]
+print(x)
