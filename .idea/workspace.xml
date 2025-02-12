@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9eb82f5c-3113-44b0-b62d-e47785969743" name="Changes" comment="working on tasks skillbox (24.7)">
+    <list default="true" id="9eb82f5c-3113-44b0-b62d-e47785969743" name="Changes" comment="completed tasks skillbox (24.7)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fast_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/fast_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules skillbox/Module24/07_Matrix/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/modules skillbox/Module24/07_Matrix/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,31 +46,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.1.executor": "Run",
-    "Python.3.executor": "Run",
-    "Python.fast_test.executor": "Run",
-    "Python.fast_test_2.executor": "Run",
-    "Python.main (1).executor": "Run",
-    "Python.main (2).executor": "Run",
-    "Python.main (3).executor": "Run",
-    "Python.main (4).executor": "Run",
-    "Python.main (5).executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.premain (1).executor": "Run",
-    "Python.premain.executor": "Run",
-    "Python.test (1).executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.test2.executor": "Debug",
-    "Python.test3.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Viktor/PycharmProjects/My",
-    "settings.editor.selected.configurable": "configurable.group.appearance"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.fast_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.fast_test_2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.main (2).executor&quot;: &quot;Run&quot;,
+    &quot;Python.main (3).executor&quot;: &quot;Run&quot;,
+    &quot;Python.main (4).executor&quot;: &quot;Run&quot;,
+    &quot;Python.main (5).executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.premain (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.premain.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test2.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.test3.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Viktor/PycharmProjects/My&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Python.main (4)">
+}</component>
+  <component name="RunManager" selected="Python.fast_test">
     <configuration name="fast_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="My" />
       <option name="ENV_FILES" value="" />
@@ -184,8 +183,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main (4)" />
         <item itemvalue="Python.fast_test" />
+        <item itemvalue="Python.main (4)" />
         <item itemvalue="Python.main (3)" />
         <item itemvalue="Python.main (2)" />
         <item itemvalue="Python.main (1)" />
@@ -496,7 +495,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737035377096</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="completed tasks skillbox (24.7)">
+      <option name="closed" value="true" />
+      <created>1737102557464</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1737102557464</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -539,7 +546,8 @@
     <MESSAGE value="working on tasks skillbox (24.5)" />
     <MESSAGE value="working on tasks skillbox (24.6)" />
     <MESSAGE value="working on tasks skillbox (24.7)" />
-    <option name="LAST_COMMIT_MESSAGE" value="working on tasks skillbox (24.7)" />
+    <MESSAGE value="completed tasks skillbox (24.7)" />
+    <option name="LAST_COMMIT_MESSAGE" value="completed tasks skillbox (24.7)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
