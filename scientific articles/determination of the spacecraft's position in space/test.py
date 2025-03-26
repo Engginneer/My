@@ -1,40 +1,30 @@
-from random import randint, uniform
-from pandas import read_excel
-from math import pi, cos, ceil
-from decimal import *
+from generation_table import generation_table
 
 
-def generation_table():
-    base_table_cosa = [[Decimal(cos(y * pi / 180) * cos(x * pi / 180)).quantize(Decimal('1.0000'))
-                        for y in range(0, 91)] for x in range(0, 91)]
-    return base_table_cosa
-
-
-def find_degree(value_cosa):  # Функция находит максимально схожее теоретическое значение с получившимся
+def find_degree(value_cosa, start_x, start_y):  # Функция находит максимально схожее теоретическое значение с получившимся
     # и выдаёт предполагаемые значения углов по осям X и Y
+    target_diff = 0.003
     if value_cosa == 0:
         result_x = 'батарея солнечная в тени'
         result_y = 'батарея солнечная в тени'
         return result_x, result_y
+
+
     else:
-        base_cos = generation_table()
-        min_diff = 0000.1
-        result_x = []
-        result_y = []
-        for x in range(0, 91):
-            for y in range(0, 91):
-                if abs(value_cosa - float(base_cos[x][y])) <= min_diff:
-                    min_diff = abs(value_cosa - float(base_cos[x][y]))
-                    result_y.append(x)
-                    result_x.append(y)
+        min_diff = 1
+        count = 0
+        while min_diff > target_diff:
+            count += 1
+            base_cos = generation_table()
+            result_x = 0
+            result_y = 0
+            for x in range(start_x - count, start_x + count + 1):
+                for y in range(start_y - count, start_y + count + 1):
+                    if abs(value_cosa - base_cos[x][y]) < min_diff:
+                        min_diff = abs(value_cosa - base_cos[x][y])
+                        result_y = y
+                        result_x = x
         return result_x, result_y
 
-
-print(find_degree(0.367))
-print(find_degree(0.366))
-
-# Если брать по 5 градусов кратность, то он находит нормаьно (последние два числа в каждом списке нужные),
-# когда беру по одному, он начинает мозги долбать сильно
-# вот в этом примере видно, что при прямых данных из таблицы "0,366", он находит последние два числа в списке правильно,
-# а при 0,367 он начинает выдумавать ерунду.
-# посмотри, можно ли сделать так, чтобы при кратности опорной таблицы в 1 градус, он искал НОРМАЛЬНЫЕ значения??
+x_cord, y_cord = find_degree(0.565, 10, 50)
+print(x_cord, y_cord)
