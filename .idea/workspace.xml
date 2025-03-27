@@ -4,20 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9eb82f5c-3113-44b0-b62d-e47785969743" name="Changes" comment="test">
-      <change afterPath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/generation_table.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/main/find_cosa.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/main/find_degree.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/main/generation_table.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/main/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/main/synthetic_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/main/unpacking_tmi_iu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/main/unpacking_tmi_p.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/temp_test.py" afterDir="false" />
+    <list default="true" id="9eb82f5c-3113-44b0-b62d-e47785969743" name="Changes" comment="work on a scientific article">
+      <change afterPath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/main/test1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fast_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/fast_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/fast_test_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/fast_test_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/main/find_degree.py" beforeDir="false" afterPath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/main/find_degree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/main/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/main/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/main/unpacking_tmi_iu.py" beforeDir="false" afterPath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/main/unpacking_tmi_iu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/temp_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/temp_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,8 +69,10 @@
     "Python.temp_test.executor": "Run",
     "Python.test (1).executor": "Run",
     "Python.test.executor": "Run",
+    "Python.test1.executor": "Run",
     "Python.test2.executor": "Debug",
     "Python.test3.executor": "Run",
+    "Python.unpacking_tmi_iu.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/Viktor/PycharmProjects/My",
@@ -85,50 +80,6 @@
   }
 }]]></component>
   <component name="RunManager" selected="Python.main (1)">
-    <configuration name="fast_test_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="My" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/fast_test_2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="generation_table" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="My" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/generation_table.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="My" />
       <option name="ENV_FILES" value="" />
@@ -195,13 +146,57 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="My" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/main" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/main/test1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="unpacking_tmi_iu" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="My" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/main" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/main/unpacking_tmi_iu.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main (1)" />
-        <item itemvalue="Python.fast_test_2" />
-        <item itemvalue="Python.temp_test" />
-        <item itemvalue="Python.generation_table" />
+        <item itemvalue="Python.test1" />
+        <item itemvalue="Python.unpacking_tmi_iu" />
         <item itemvalue="Python.test" />
+        <item itemvalue="Python.temp_test" />
       </list>
     </recent_temporary>
   </component>
@@ -525,7 +520,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739368657997</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="work on a scientific article">
+      <option name="closed" value="true" />
+      <created>1742996877411</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1742996877411</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -570,7 +573,8 @@
     <MESSAGE value="working on tasks skillbox (24.7)" />
     <MESSAGE value="completed tasks skillbox (24.7)" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="work on a scientific article" />
+    <option name="LAST_COMMIT_MESSAGE" value="work on a scientific article" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -586,7 +590,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/scientific articles/determination of the spacecraft's position in space/test.py</url>
-          <line>21</line>
+          <line>22</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
