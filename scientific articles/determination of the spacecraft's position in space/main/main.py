@@ -1,6 +1,7 @@
 from unpacking_tmi_iu import unpacking_tmi_iu
 from find_cosa import find_cosa
 from find_degree import find_degree
+#from drawing_a_graph import drawing_a_graph
 
 if __name__ == '__main__':
     main_system = False  # Имитация отказа основной системы
@@ -12,7 +13,7 @@ if __name__ == '__main__':
     start_x = 0
     start_y = 0
     if main_system == False:
-        TMI = unpacking_tmi_iu('TMI2.txt')
+        TMI = unpacking_tmi_iu('TMI2.txt') # распаковываем телеметрию
         for i in range(len(TMI[0])):
             cosa_list.append(find_cosa(TMI[0][i], TMI[1][i]))
             DT_X_list.append(TMI[2][i])
@@ -34,3 +35,7 @@ if __name__ == '__main__':
             else:
                 print(f'отрезок времени - {i}, значение cosa - {cosa_list[i]}, угол по оси "Х"- {x_cord_list[i]} '
                       f'градусов, угол по оси "Y" - {y_cord_list[i]} градусов')
+
+
+    print([i for i in range(len(x_cord_list))], x_cord_list, y_cord_list, cosa_list)
+
