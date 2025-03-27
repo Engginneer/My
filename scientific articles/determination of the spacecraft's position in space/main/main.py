@@ -1,7 +1,7 @@
 from unpacking_tmi_iu import unpacking_tmi_iu
 from find_cosa import find_cosa
 from find_degree import find_degree
-#from drawing_a_graph import drawing_a_graph
+from drawing_a_graph import drawing_a_graph
 
 if __name__ == '__main__':
     main_system = False  # Имитация отказа основной системы
@@ -36,6 +36,6 @@ if __name__ == '__main__':
                 print(f'отрезок времени - {i}, значение cosa - {cosa_list[i]}, угол по оси "Х"- {x_cord_list[i]} '
                       f'градусов, угол по оси "Y" - {y_cord_list[i]} градусов')
 
-
-    print([i for i in range(len(x_cord_list))], x_cord_list, y_cord_list, cosa_list)
+    time_points = list(range(len(x_cord_list)))
+    drawing_a_graph(time_points, x_cord_list, y_cord_list, cosa_list)
 
